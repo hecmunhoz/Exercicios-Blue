@@ -6,4 +6,5 @@
 
 let hp = prompt("Monster HP (between 10 and 50) = "),
     atk = prompt("Your attack power (between 5 and 10) = ");
+
 console.log(`You will defeat the monster in ${Math.ceil(hp/atk)} turns.`);
