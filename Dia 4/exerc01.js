@@ -16,17 +16,16 @@ o novo salário, após o aumento."*/
 
 let reajuste = 0,
     salarioFinal = 0,
-    reajusteLista = [1.20, 1.15, 1.10, 1.05],
     salarioBase = (parseFloat(prompt("Digite o salário-base: "))).toFixed(2);
 
 if ( salarioBase <= 280 ) {
-   reajuste = reajusteLista[0]; 
+   reajuste = 1.20; 
 } else if ( salarioBase <= 700 ) {
-   reajuste = reajusteLista[1];
+   reajuste = 1.15;
 } else if ( salarioBase <= 1500 ) {
-   reajuste = reajusteLista[2];
+   reajuste = 1.10;
 } else if ( salarioBase > 1500 ) {
-   reajuste = reajusteLista[3];
+   reajuste = 1.05;
 }
 
 salarioFinal = ( salarioBase * reajuste ).toFixed(2)
