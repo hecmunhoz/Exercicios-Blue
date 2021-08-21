@@ -13,7 +13,8 @@ O programa deve no final emitir uma classificação sobre a participação da
 pessoa no crime.
 Se a pessoa responder positivamente a 2 questões ela deve ser classificada
 como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso
-contrário, ele será classificado como "Inocente".*/
+contrário, ele será classificado como "Inocente".
+*/
 
 const interrogatorio = 
 ["Telefonou para a vítima?",
@@ -34,21 +35,18 @@ if ( nivelDeSuspeita == 5 ){
 } else if ( nivelDeSuspeita > 2 ){
   veredito = "Cúmplice";
 } else if ( nivelDeSuspeita == 2 ){ 
-  veredito = "Suspeito";
-}
-
+  veredito = "Suspeito"; 
+} 
 console.log(`Você foi julgado como: ${veredito}.`);
 
 function pergunta(perg){
-	let resp;
-	resp = prompt(perg).toUpperCase();
-  
-	if ( resp == "SIM" || resp == "S" || resp == "Y" ){
-   	  return 1;
-	} else if ( resp == "NÃO" || resp == "N" ){
-   	  return 0;
-	} else {
-   	  console.log("Por favor, responda as perguntas com SIM ou NÃO.");
-	    return pergunta(perg);
+  let resp = prompt(perg).toUpperCase();
+  if ( resp == "SIM" || resp == "S" || resp == "Y" ){
+    return 1;
+  } else if ( resp == "NÃO" || resp == "N" ){
+    return 0;
+  } else {
+    console.log("Por favor, responda as perguntas com SIM ou NÃO.");
+    return pergunta(perg);
   }
 }
