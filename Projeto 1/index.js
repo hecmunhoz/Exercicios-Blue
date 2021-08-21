@@ -43,7 +43,7 @@ function pergunta(perg){
   let resp = prompt(perg).toUpperCase();
   if ( resp == "SIM" || resp == "S" || resp == "Y" ){
     return 1;
-  } else if ( resp == "NÃO" || resp == "N" ){
+  } else if ( resp == "NÃO" || resp == "NAO" || resp == "N" ){
     return 0;
   } else {
     console.log("Por favor, responda as perguntas com SIM ou NÃO.");
