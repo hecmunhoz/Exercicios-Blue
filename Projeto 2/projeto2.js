@@ -87,7 +87,7 @@ console.log("------ FIM DE JOGO ------");
 function quemGanhou(j1,j2){
     if ( j1 === j2 ){
         return ["Ora bolas, um empate!",0];
-    } else if ( ( j1 < j2 && !(j1 % 2) && !(j2 % 2)) || ( j1 > j2 && (j1 % 2 || j2 % 2)) ){
+    } else if ( (j1 === 0 && j2 === 2) || (j1 === 1 && j2 === 0) || (j1 === 2 && j2 === 1) ){
         return ["Você venceu!",1];
     } else {
         return ["O computador venceu!",-1];
