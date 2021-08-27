@@ -10,18 +10,18 @@
 //     Perguntar se o jogador quer jogar novamente, se sim volte à escolha de quantidade de rodadas, se não finalize o programa.
 
 console.log("\n------ JOKENPÔ ------");
-console.log("    PEDRA   = 0\n    PAPEL   = 1\n    TESOURA = 2\n");
+console.log("   PEDRA    =  0\n   PAPEL    =  1\n   TESOURA  =  2\n");
 
 const prompt = require('prompt-sync')();
 const jogador = prompt("Por favor, digite seu nome: ").toUpperCase();
 let repetir = true;
-let novamente = " ";
+let novamente = "";
 
 while ( repetir ){
 
     let rodadas = 0;
     while ( isNaN(rodadas) || rodadas > 10 || rodadas < 1 ){
-        rodadas = Number(prompt(`Boas-vindas${novamente}ao JOKENPÔ, ${jogador}. Quantas rodadas você deseja jogar? (entre 1 e 10): `));
+        rodadas = Number(prompt(`Boas-vindas ao JOKENPÔ${novamente}, ${jogador}. Quantas rodadas você deseja jogar? (entre 1 e 10): `));
     }
     console.log();
     
@@ -75,7 +75,7 @@ while ( repetir ){
     }
     if ( repetir === "SIM" ){
         repetir = true;
-        novamente = " novamente ";
+        novamente = " novamente";
         console.log("\n------")
     } else if ( repetir === "NAO" ){
         repetir = false;
